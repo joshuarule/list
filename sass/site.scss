@@ -3,7 +3,7 @@
 }
 
 .container {
-  max-width: 500px;
+  max-width: 767px;
   margin: 0 auto;
 }
 
@@ -20,6 +20,10 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+h2 {
+  color: #FFF;
 }
 
 .item {
@@ -40,10 +44,12 @@ button{
 
   &.remove {
     background: red;
+    display: none;
   }
 }
 
 .controls {
+  position: relative;
   margin-bottom: 5px;
 }
 

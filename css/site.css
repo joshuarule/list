@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 .container {
-  max-width: 500px;
+  max-width: 767px;
   margin: 0 auto; }
 
 .cf {
@@ -19,6 +19,9 @@ ol {
   margin: 0;
   padding: 0; }
 
+h2 {
+  color: #FFF; }
+
 .item {
   background: yellow;
   border: 1px solid yellow;
@@ -34,9 +37,11 @@ button {
   font-size: 16px;
   margin: 0; }
   button.remove {
-    background: red; }
+    background: red;
+    display: none; }
 
 .controls {
+  position: relative;
   margin-bottom: 5px; }
 
 .checkbox {
