@@ -1,51 +1,43 @@
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .container {
   max-width: 500px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
-.cf {clear: both;}
+.cf {
+  clear: both; }
 
 body {
   font-family: Helvetica, Arial, sans-serif;
   background: black;
-  color: yellow;
-}
+  color: yellow; }
 
 ol {
   clear: both;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 .item {
   background: yellow;
   border: 1px solid yellow;
   margin-bottom: 5px;
   position: relative;
-  height: 40px;
-}
+  height: 40px; }
 
-button{
+button {
   float: right;
   background: yellow;
   border: none;
   padding: 9px 16px;
   font-size: 16px;
-  margin: 0;
-
-  &.remove {
-    background: red;
-  }
-}
+  margin: 0; }
+  button.remove {
+    background: red; }
 
 .controls {
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 .checkbox {
   position: absolute;
@@ -58,9 +50,8 @@ button{
   line-height: 13px;
   margin-top: -8px;
   background: black;
-  border: 1px solid yellow;
-
-  &:after {
+  border: 1px solid yellow; }
+  .checkbox:after {
     content: '';
     position: absolute;
     background: black;
@@ -68,22 +59,17 @@ button{
     bottom: 0;
     left: 0;
     right: 0;
-    pointer-events: none;
-  }
-}
+    pointer-events: none; }
 
 input[type="checkbox"] {
   padding: 0;
   margin: 0;
-  color: yellow;
-}
+  color: yellow; }
 
 .disabled {
-  background: #000;
-  input[type="text"] {
-    color: grey;
-  }
-}
+  background: #000; }
+  .disabled input[type="text"] {
+    color: grey; }
 
 input[type="text"] {
   padding-left: 20px;
@@ -94,13 +80,12 @@ input[type="text"] {
   width: 100%;
   margin: 0;
   padding: 10px 0 10px 40px;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 [contenteditable]::selection {
-  background: pink; /* Safari */
-  }
-[contenteditable]::-moz-selection {
-  background: pink; /* Firefox */
-}
+  background: pink;
+  /* Safari */ }
 
+[contenteditable]::-moz-selection {
+  background: pink;
+  /* Firefox */ }

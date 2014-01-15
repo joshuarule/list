@@ -4,9 +4,54 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="css/site.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 </head>
 <body>
-  <h1>Shopping List</h1>
+  <div class="container">
+    <header>
+      <h2>List</h2>
+    </header>
+    <div class="controls">
+      <input type="checkbox">
+      <button class="add">add</button>
+      <button class="remove">remove</button>
+      <div class="cf"></div>
+    </div>
+    <ol>
+      <li class="item disabled">
+        <div class="checkbox">
+          <input type="checkbox">
+        </div>
+        <input type="text" value="item 1">
+      </li>
+      <li class="item">
+        <div class="checkbox">
+          <input type="checkbox">
+        </div>
+        <input type="text" value="item 1">
+      </li>
+      <li class="item">
+        <div class="checkbox">
+          <input type="checkbox">
+        </div>
+        <input type="text" value="item 1">
+      </li>
+    </Ul>
+    
+
+  </div>
+  <script>
+    $(document).ready(function() {
+       $('.item input[type="text"]').click(function(){
+           var input = this;
+           input.focus();
+           input.setSelectionRange(0,999); 
+       });
+    });
+  </script>
+  
+  
 </body>
 </html>
+
