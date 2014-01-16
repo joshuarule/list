@@ -67,6 +67,7 @@ button {
     pointer-events: none; }
 
 input[type="checkbox"] {
+  opacity: 0;
   padding: 0;
   margin: 0;
   color: yellow; }
