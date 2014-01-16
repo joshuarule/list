@@ -53,30 +53,30 @@ button{
   margin-bottom: 5px;
 }
 
-.checkbox {
-  position: absolute;
-  display: block;
-  text-align: center;
-  left: 10px;
-  top: 50%;
-  height: 16px;
-  width: 16px;
-  line-height: 13px;
-  margin-top: -8px;
-  background: black;
-  border: 1px solid yellow;
+// .checkbox {
+//   position: absolute;
+//   display: block;
+//   text-align: center;
+//   left: 10px;
+//   top: 50%;
+//   height: 16px;
+//   width: 16px;
+//   line-height: 13px;
+//   margin-top: -8px;
+//   background: black;
+//   border: 1px solid yellow;
 
-  &:after {
-    content: '';
-    position: absolute;
-    background: black;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-  }
-}
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   background: black;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   pointer-events: none;
+  // }
+//}
 
 input[type="checkbox"] {
   opacity:  0;
