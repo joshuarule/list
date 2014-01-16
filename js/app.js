@@ -2,6 +2,8 @@ var items, item, name;
 
 $(document).ready(function(){
 
+  // add fastclick for mobile use
+
   $(function() {
     FastClick.attach(document.body);
   });
@@ -12,13 +14,13 @@ $(document).ready(function(){
 
   // click on input select all
 
-  $('input[type="text"]').click(function(){
+  $(document).on('click', 'input[type="text"]', function(){
     var input = this;
     input.focus();
     input.setSelectionRange(0,999); 
   });
 
-  // toggle empty list text
+  // toggle empty list text and select all checkbox
 
   function isEmpty() {
     if (items.length > 0) {
