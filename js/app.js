@@ -2,19 +2,19 @@ var items, item, name;
 
 $(document).ready(function(){
 
-  // add fastclick for mobile use
-
-  $(function() {
-    FastClick.attach(document.body);
-  });
-
   items = [];
+  titleInput = ".itemName";
 
-  name = $("#itemName");
+  // item constructor
 
-  // click on input select all
+  function item(title) {
+    this.title = title;
+    this.active = true;
+  };
 
-  $(document).on('click', 'input[type="text"]', function(){
+  // click on input selects all text
+
+  $(document).on('click', titleInput, function(){
     var input = this;
     input.focus();
     input.setSelectionRange(0,999); 
@@ -31,9 +31,17 @@ $(document).ready(function(){
       $(".checkAll").hide();
     }
   }
-  
 
-  // adds item
+  // on change update item
+
+  $(document).on('change', titleInput, function(){
+
+    // var index = Number($(this).attr("id")); // grabs id val for index
+    // items[index].title = $(this).val(); // sets the title of the current item
+    // console.log(index)
+  });
+
+  // adds item html
   
   function addItem() {
     $('.items').prepend(
@@ -42,30 +50,24 @@ $(document).ready(function(){
           "<input type='checkbox' id='item-" + items.length + "'>" + 
           "<label for='item-" + items.length + "'></label>" + 
         "</div>" + 
-        "<input id='itemName' type='text' value='item " + items.length + "'>" + 
+        "<input class='itemName' type='text' value='item " + items.length + "'>" + 
       "</li>");
-
-    return {name: "", disable: true};
-  }
-
-  function deleteItem() {
-    // var index = items.indexOf(itemName.val()) // grab the current index by name
-    // items.splice(index, 1) // remove that index
   }
 
   // on click add item 
 
   $('.add').click(function() {
-    items.push(addItem());
+    var x = new item();
+    items.push(x); // puts item into items[]
+    addItem();
     isEmpty();
   });
 
-  // on change update
+  // add fastclick for mobile use
 
-  $("#itemName").change(function(){
-    alert("change");
+  $(function() {
+    FastClick.attach(document.body);
   });
-
 });
 
 // disable item
