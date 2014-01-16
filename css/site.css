@@ -64,7 +64,6 @@ input[type="checkbox"] {
   appearance: none; }
 
 input[type=checkbox] + label {
-  outline: 1px solid red;
   position: absolute;
   display: block;
   height: 38px;
@@ -72,8 +71,17 @@ input[type=checkbox] + label {
   top: -12px;
   left: -11px; }
 
-input[type=checkbox]:checked + label {
-  outline: 1px solid blue; }
+input[type=checkbox]:checked + label:before {
+  content: '+';
+  display: block;
+  position: absolute;
+  left: 1px;
+  right: 0px;
+  line-height: 36px;
+  font-size: 18px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg); }
 
 .disabled {
   background: #000; }

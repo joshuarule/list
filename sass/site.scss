@@ -80,18 +80,13 @@ button{
 
 input[type="checkbox"] {
   opacity:  0;
-  // padding:  0;
-  // margin:   0;
-  // background: none;
-  // outline: 0;
-  // border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
 input[type=checkbox] + label {
-  outline: 1px solid red;
+  // outline: 1px solid red;
   position: absolute;
   display: block;
   height: 38px;
@@ -100,8 +95,25 @@ input[type=checkbox] + label {
   left: -11px;
 }
 
+input[type=checkbox]:checked {
+}
+
 input[type=checkbox]:checked + label {
-  outline: 1px solid blue;
+  // outline: 1px solid blue;
+
+  &:before {
+    content: '+';
+    display: block;
+    position: absolute;
+    left: 1px;
+    right: 0px;
+    line-height: 36px;
+    font-size: 18px;
+
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+  }
 }
 
 .disabled {
