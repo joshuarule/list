@@ -2,6 +2,10 @@ var items, item, name;
 
 $(document).ready(function(){
 
+  $(function() {
+    FastClick.attach(document.body);
+  });
+
   items = [];
 
   name = $("#itemName");
