@@ -2,7 +2,7 @@
   box-sizing: border-box; }
 
 .container {
-  padding-top: 40px;
+  padding: 40px 0;
   max-width: 767px;
   margin: 0 auto; }
 

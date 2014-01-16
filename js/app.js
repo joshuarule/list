@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   // click on input select all
 
-  $('.item input[type="text"]').click(function(){
+  $('input[type="text"]').click(function(){
     var input = this;
     input.focus();
     input.setSelectionRange(0,999); 
