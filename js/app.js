@@ -14,11 +14,24 @@ $(document).ready(function(){
     input.setSelectionRange(0,999); 
   });
 
+  // toggle empty list text
+
+  function isEmpty() {
+    if (items.length > 0) {
+      $(".empty").hide();
+      $(".checkAll").show();
+    } else {
+      $(".empty").show();
+      $(".checkAll").hide();
+    }
+  }
+  
+
   // adds item
   
   function addItem() {
     $('.items').prepend(
-      "<li class='item disabled'>" +
+      "<li class='item'>" +
         "<div class='checkbox'>" +
           "<input type='checkbox' id='item-" + items.length + "'>" + 
           "<label for='item-" + items.length + "'></label>" + 
@@ -38,6 +51,7 @@ $(document).ready(function(){
 
   $('.add').click(function() {
     items.push(addItem());
+    isEmpty();
   });
 
   // on change update

@@ -3,6 +3,7 @@
 }
 
 .container {
+  padding-top: 40px;
   max-width: 767px;
   margin: 0 auto;
 }
@@ -26,7 +27,14 @@ h2 {
   color: #FFF;
 }
 
-.item {
+p {
+  text-indent: 10px;
+  font-size: 16px;
+  line-height: 40px;
+  margin: 0 0 5px 0;
+}
+
+.item, .empty {
   background: yellow;
   border: 1px solid yellow;
   margin-bottom: 5px;
@@ -116,6 +124,8 @@ input[type=checkbox]:checked + label {
     -moz-transform: rotate(45deg);
   }
 }
+
+.checkAll {display: none;}
 
 .disabled {
   background: #000;
