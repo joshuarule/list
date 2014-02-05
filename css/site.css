@@ -14,6 +14,14 @@ body {
   background: black;
   color: yellow; }
 
+::selection {
+  background: red;
+  /* Safari */ }
+
+::-moz-selection {
+  background: #ffb7b7;
+  /* Firefox */ }
+
 ol {
   clear: both;
   list-style-type: none;
