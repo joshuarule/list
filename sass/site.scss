@@ -51,6 +51,10 @@ p {
   height: 40px;
 }
 
+.item {
+  padding-right: 5px; // cuts off text on right
+}
+
 .empty {
   @extend .disabled;
 }
