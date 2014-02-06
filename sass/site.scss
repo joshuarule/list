@@ -1,3 +1,5 @@
+$bg-color: yellow;
+
 * {
   box-sizing: border-box;
 }
@@ -23,7 +25,7 @@ body {
   background: #ffb7b7; /* Firefox */
 }
 
-ol {
+ul {
   clear: both;
   list-style-type: none;
   margin: 0;
@@ -42,11 +44,15 @@ p {
 }
 
 .item, .empty {
-  background: yellow;
-  border: 1px solid yellow;
+  background: $bg-color;
+  border: 1px solid $bg-color;
   margin-bottom: 5px;
   position: relative;
   height: 40px;
+}
+
+.empty {
+  @extend .disabled;
 }
 
 button{
@@ -61,6 +67,12 @@ button{
   &.remove {
     background: red;
     display: none;
+    margin-right: 5px;
+  }
+
+  &.add {
+    font-weight: bold;
+    padding: 9px 13px;
   }
 }
 
@@ -80,18 +92,11 @@ button{
   line-height: 13px;
   margin-top: -8px;
   background: black;
-  border: 1px solid yellow;
+  border: 1px solid $bg-color;
+}
 
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   background: black;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   pointer-events: none;
-  // }
+.completed {
+  background: red;
 }
 
 input[type="checkbox"] {
@@ -135,9 +140,9 @@ input[type=checkbox]:checked + label {
 .checkAll {display: none;}
 
 .disabled {
-  background: #000;
+  background: #000 !important;
   input[type="text"] {
-    color: grey;
+    color: grey !important;
   }
 }
 
@@ -158,5 +163,20 @@ input[type="text"] {
   }
 [contenteditable]::-moz-selection {
   background: pink; /* Firefox */
+}
+
+//item color generator
+
+@for $i from 1 through 50 {
+  .item:nth-child(#{$i}) {
+    background: adjust-hue($bg-color, ($i * 3));
+    border-color: adjust-hue($bg-color, ($i * 3));
+    .checkbox {
+      border-color: adjust-hue($bg-color, ($i * 3));
+    }
+    input[type=checkbox]:checked + label {
+      color: adjust-hue($bg-color, ($i * 3));
+    }
+  }
 }
 
